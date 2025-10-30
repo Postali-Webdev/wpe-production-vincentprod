@@ -1,0 +1,15 @@
+{
+    "name": "acf/publications",
+    "title": "Crest Publications scroller",
+    "description": "Publications scroller using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["publications"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "publications.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

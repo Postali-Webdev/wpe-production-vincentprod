@@ -1,0 +1,15 @@
+{
+    "name": "acf/testimonials-slim",
+    "title": "Crest Testimonials Block - Slim",
+    "description": "Testimonials block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["results"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "testimonials.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

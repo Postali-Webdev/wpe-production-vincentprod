@@ -1,0 +1,15 @@
+{
+    "name": "acf/video-block",
+    "title": "Crest Video Block",
+    "description": "Video content block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["video"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "video-block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "acf/transcript",
+    "title": "Crest Video Transcript Block",
+    "description": "Video transcript block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["video"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "transcript.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,408 @@
+.parent {
+    padding:0 !important;
+    margin-top: -125px;
+}
+
+
+.banner-block {
+    &#banner-home,
+    &#banner-parent {
+        background-repeat: no-repeat;
+        background-position: right bottom -1px;
+        background-size: 50%;
+        padding-bottom: 0;
+
+        @include respond(tab-port) {
+            background-size: 90%;
+        }
+
+        @include respond(phone) {
+            background-size: 100%;
+            background-position: right -80px bottom -1px;
+        }
+
+        .columns {
+            align-items: center;
+            justify-content: flex-start;
+            gap: 7%;
+            align-items: normal;
+
+            .banner-title {
+                margin-bottom: 30px;
+            }
+
+            .foreground-image {
+                max-width: 100%;
+                width: 100%;
+                flex-direction: column;
+                display: flex;
+                border-radius: 10px;
+
+                @include respond(tab-port) {
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                @include respond(tab-land) {
+                    margin-bottom: 0;
+                }
+
+                @include respond(phone) {
+                    justify-content: center;
+                }
+
+                img {
+                    height: 100%;
+                    width: 32vw;
+                    max-width: 500px;
+                    max-height: 700px;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    -o-object-position: top;
+                        object-position: top;
+
+                    @include respond(tab-land) {
+                        -o-object-fit: contain;
+                           object-fit: contain;
+                        -o-object-position: bottom left;
+                           object-position: bottom left;
+                    }
+
+                    @include respond(tab-port) {
+                        height: auto;
+                        width: 60%;
+                    }
+
+                    @include respond(phone) {
+                        width: 80%;
+                        margin: 0 auto -125px;
+                    }
+                }
+            }
+
+            .content {
+                box-sizing: border-box;
+                flex-direction: column;
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 60px;
+                padding-left: 30px;
+                border-left: 1px solid #ccc;
+
+                @include respond(tab-port) {
+                    padding-left: 0;
+                }
+
+                @include respond(phone) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .banner-content {
+
+                @include respond(tab-port) {
+                    width: 100%;
+                    padding: 30px;
+                    box-sizing: border-box;
+                }
+
+                * {
+                    color:$dkblue;
+                }
+
+                p.lrg {
+                    font-size: 2.5vw;
+                    font-weight: bold;
+                    line-height: 115%;
+
+                    @media screen and (min-width:$desktop-full) {
+                        font-size: 42px;
+                    }
+
+                    @include respond(desktop-lg) {
+                        font-size: 3vw;
+                    }
+
+                    @include respond(tab-port) {
+                        font-size: 4vw;
+                    }
+
+                    @include respond(phone) {
+                        font-size: 6vw;
+                    }
+
+                }
+
+                
+
+                p.cta {
+                    font-size: 20px;
+                }
+
+                .banner-cta {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 20px;
+
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        
+    } 
+
+    &#banner-home {
+        h1 {
+            color:$red;
+            font-family: $crimson;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: $normal;
+            @include respond(phone) {
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
+        }
+
+        p.title {
+            font-family: $crimson;
+            color:$mdblue;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+        }
+
+        p.headline {
+            font-family: $crimson;
+            font-size: 3.3vw;
+            line-height: 95%;
+            color:$dkblue;
+
+            @include respond(tab-port) {
+                font-size: 8vw;
+            }
+
+            @include respond(phone) {
+                font-size: 10vw;
+            }
+        }
+        .columns {
+            .column-33.content {
+                @media screen and (min-width: 1800px) {
+                    width: 40%;
+                }
+                @media screen and (max-width: 1799px) {
+                    width: 30%;
+                }
+                @include respond(tab-port) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &#banner-parent {
+        padding: 170px 0 40px 0 !important;
+        background-color: $dkblue;
+        background-size: cover;
+        background-position: center;
+        @include respond(phone) {
+            padding: 130px 0 40px 0 !important;
+        }
+        * {
+            color:$white !important;
+        }
+
+        .container {
+            padding:0 60px 0 80px !important;
+
+            @include respond(phone) {
+                padding: 0 30px 0 30px !important;
+            }
+        }
+
+        .banner-title {
+            margin-bottom: 30px;
+
+            p#breadcrumbs {
+                font-size: 14px;
+                text-transform: uppercase;
+                color:$tan !important;
+                letter-spacing: 1px;
+                @include respond(phone) {
+                    font-size: 16px !important;
+                    margin-bottom: 0 !important;
+                }
+                span,
+                a {
+                    color:$tan !important;
+                }
+            }
+        }
+
+        .columns {
+            p.headline,
+            p.title {
+                color: $tan !important;
+            }
+
+            h1 {
+                font-family: $crimson;
+                font-size: 3.3vw;
+                line-height: 95%;
+                font-weight: normal;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                @include respond(phone) {
+                    font-size: 8vw;
+                }
+            }
+
+            p.headline {
+                font-size: 24px;
+                line-height: 1.2;
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+    &#banner-child {
+        padding: 50px 30px 80px !important;
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    
+        .column-66 {
+            flex-direction: column;
+            align-items: center;
+
+            p.large {
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                color:$tan;
+                text-transform: uppercase;
+                font-weight: normal;
+                font-size: 45px;
+                @include respond(phone) {
+                    font-size: 35px !important;
+                }
+            }
+
+            .btn.txt:not(.btn.error) {
+                color:$white !important;
+    
+                &::after {
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+
+    &#banner-child,
+    &#banner-child-full {
+        padding: 15px 0 80px;
+        background-size: cover;
+        background-position: center;
+
+        #breadcrumbs {
+            font-size: 13px;
+        }
+
+        *:not(.btn.error) {
+            color:$white;
+        }
+
+        .columns {
+            align-items: center;
+
+            h1 {
+                font-size: 45px;
+                margin-bottom: 30px;
+            }
+    
+            p {
+                font-size: 18px;
+            }
+    
+            .foreground-image {
+                box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3);
+                flex-direction: column;
+                display: flex;
+                border-radius: 10px;
+    
+                img {
+                    height: 100%;
+                    width: 100%;
+                    max-height: 700px;
+                    border-radius: 10px;
+                    -o-object-fit: cover;
+                       object-fit: cover;
+                    -o-object-position: center;
+                       object-position: center;
+                }
+            }
+        }
+    }
+
+    &#banner-child-full {
+        padding: 15px 0 300px;
+
+        .banner-image {
+            @include respond(tab-port) {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.banner-block-intro {
+    background: #EBEBEB;
+    padding:0;
+
+    .container {
+        .columns {
+            .column-75 {
+                background: $white;
+                box-sizing: border-box;
+                padding: 5% 7%;
+                min-height: 400px;
+                margin-top: -200px;
+                border-radius: 15px;
+                width:75%;
+
+                @include respond(tab-port) {
+                    width: 100%;
+                    margin-top: -260px;
+                    padding: 40px;
+                }
+
+                h2 {
+                    line-height: 100%;
+                    margin-bottom: 20px;
+                }
+
+                p.subhead {
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+
+                p {
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .intro-cta {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

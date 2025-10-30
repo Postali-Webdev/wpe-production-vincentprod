@@ -1,0 +1,15 @@
+{
+    "name": "acf/recent-articles",
+    "title": "Crest Recent Articles block",
+    "description": "Recent Articles block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["articles"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "recent-articles.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,61 @@
+#achievements-slider {
+    background: $white;
+    padding: 50px 50px 20px;
+    box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.25);
+    @include respond(phone) {
+        padding: 50px 20px 20px;
+    }
+    .slide-item {
+        border-bottom: 1px solid $ltgrey;
+        margin-bottom: 30px;
+
+        .top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 30px;
+            .tag {
+                background: $xltgrey;
+                font-family: $funnel;
+                font-size: 16px;
+                padding: 12px 24px;
+                border-radius: 50px;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.achievements-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
+
+    button {
+        background: none;
+        border:none;
+    }
+
+    .icon-arrow {
+        font-size: 34px;
+        color: $red;
+    }
+
+    .prev {
+        transform: rotate(180deg);
+    }
+
+    .slick-disabled {
+        opacity: .3;
+    }
+}

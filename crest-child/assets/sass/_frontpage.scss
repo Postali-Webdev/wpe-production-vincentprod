@@ -1,0 +1,141 @@
+.page-template-front-page {
+
+    .tabs-content {
+        .accordions_content {
+            .btn.txt, p a {
+                color: $white !important;
+            }
+        }
+    }
+
+    section.wp-block-group {
+        padding:100px 0;
+        @include respond(phone) {
+            padding: 60px 0;
+        }
+    }
+
+    section.img-panel {
+        margin-left: 0;
+    }
+
+    .container {
+        @include respond(tab-port) {
+            padding: 0 !important;   
+        }
+    }
+
+    .hp-banner {
+        padding: 50px 0 0 !important;
+        background-color: $white;
+        margin-bottom: -2px;
+
+
+        .wp-block-group__inner-container {
+            @include respond(phone) {
+                padding:0 !important;
+            }
+        }
+
+        .banner-title {
+            @include respond(phone) {
+                padding: 0 30px !important;
+            }
+        }
+    }
+
+    .hp-touts {
+        background:$dkblue;
+        padding: 50px 0 !important;
+        position: relative;
+        z-index: 2;
+
+        .columns {
+            background:none;
+            position: relative;
+
+            @include respond(tab-port) {
+                flex-direction: column;
+            }
+
+            &::before {
+                position: absolute;
+                left: 33.3%;
+                height:100%;
+                width: 1px;
+                background-color: $white;
+                top:0;
+                opacity: .3;
+                content:"";
+
+                @include respond(tab-port) {
+                    display:none;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                right: 33.3%;
+                height:100%;
+                width: 1px;
+                background-color: $white;
+                top:0;
+                opacity: .3;
+                content:"";
+
+                @include respond(tab-port) {
+                    display:none;
+                }
+            }
+
+            .column-33 {
+                justify-content: center;
+                text-align: center;
+
+                @include respond(tab-port) {
+                    max-width: 225px;
+                    margin:0 auto;
+                }
+
+                &:nth-of-type(2) {
+                    @include respond(tab-port) {
+                        margin:40px auto;
+                        padding:40px 0;
+                        border-top:1px solid $white;
+                        border-bottom: 1px solid $white;
+                    }
+                }
+
+                p {
+                    line-height: .9;
+                    margin-bottom: 0;
+                }
+
+                * {
+                    font-family: $crimson;
+
+                    .tout-header,
+                    .tout-text {
+                        color:$white;
+                    }
+
+                    .tout-number {
+                        color:$red;
+                        font-size: 90px;
+                    }
+
+                    .tout-header {
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        letter-spacing: 2px;
+                    }
+
+                    .tout-text {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

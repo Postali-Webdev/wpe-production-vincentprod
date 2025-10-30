@@ -1,0 +1,230 @@
+.testimonials-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .stars {
+        position: relative;
+
+        &::after {
+            content: "★★★★★";
+            color: #EB9915;
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .reviews-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin: 0 2% 0 auto;
+
+        .rating {
+            display: block;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                right: -17px;
+                width: 2px;
+                height: 100%;
+                top:0;
+                background:$blk;
+                content: "";
+            }
+
+            .average {
+                font-size: 30px;
+                font-weight: bold;
+                font-family: $sans;
+            }
+
+            .total {
+                font-size: 13px;
+                text-transform: uppercase;
+                font-family: $sans;
+            }
+        }
+
+        .logo {
+            width: 100px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .testimonial {
+        background:$white;
+        position: relative;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 30px 30px 65px;
+        flex-direction: column;
+        width:31.3%;
+        margin:0 1%;
+
+        @include respond(tab-land) {
+            width: 100%;
+            margin:10px 0;
+        }
+
+        p {
+            margin-bottom: 0;
+
+            &.author {
+                position: absolute;
+                bottom:30px;
+                color:#267DC1;
+                font-size: 15px;
+                text-transform: uppercase;
+                font-weight: bold;
+                line-height: 100%;
+            }
+        }
+    }
+
+    a.more {
+        display: flex;
+        align-items: center;
+        color: $blk;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: bold;
+
+        &:hover {
+            color:#226CE0;
+            text-decoration: none;
+        }
+    }
+
+    .icon-crest-arrow-right {
+        margin-left: 10px;
+        font-size: 18px;
+        color:#226CE0;
+    }
+
+    &#testimonials-one {
+        flex-direction: column;
+        
+        .rating-details-block {
+            display: flex;
+            margin-bottom: 50px;
+            align-items: center;
+            justify-content: space-between;
+
+            @include respond(phone) {
+                display: block;
+            }
+
+            .logo-block {
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+
+                @include respond(phone) {
+                    margin-bottom: 15px;
+                }
+
+                .stars {
+                    margin-left: 15px;
+                }
+            }
+
+            img {
+                width: 90px;
+                -webkit-filter: invert(1);
+                        filter: invert(1);
+            }
+        }
+
+
+
+            p {
+                color:$white;
+                font-size: 22px;
+                line-height: 180%;
+                font-weight: normal;
+            }
+
+            .name-date {
+                p {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    font-weight: bold;
+                }
+            }
+
+            .more {
+                display:flex;
+                align-items: center;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+
+                a {
+                    color:$white;
+                    text-decoration: underline;
+                    font-size: 16px;
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .icon-crest-arrow-right {
+                    margin-left: 10px;
+                    font-size: 18px;
+                    color:$white;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #226CE0;
+                    margin-left: 20px;
+                    transition: $trans;
+
+                    &::before {
+                        font-size: 15px;
+                    }
+                }
+
+                &:hover {
+                    .icon-crest-arrow-right {
+                        margin-left: 24px;
+                    }
+                }
+            }
+
+
+        .cta-block  {
+            background: $white;
+            padding: 50px 30px;
+            border-radius: 15px;
+            justify-content: center;
+            text-align: center;
+
+            @include respond(tab-port) {
+                margin-top: 50px;
+            }
+
+            p.lrg {
+                font-size: 24px;
+                font-weight: bold;
+                color: #001242;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

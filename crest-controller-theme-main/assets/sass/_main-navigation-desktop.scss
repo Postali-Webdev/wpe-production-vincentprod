@@ -1,0 +1,177 @@
+
+// keyframes for desktop sub-nav
+
+@keyframes fadein{
+    0% { opacity:0; top:85px; }
+    100% { opacity:1; top:95px; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; top:85px; }
+    100% { opacity:1; top:95px; }
+}
+
+
+header {    
+    #header-top {
+        
+        &_right {
+            &_menu {
+                #menu-main-menu {
+                    list-style-type: none;
+                    display: flex;
+                    padding-bottom:0;
+                    align-items: center;
+
+                    li {
+                        display: flex;
+                        margin-left:5px;
+                        position: relative;
+                        height: auto;
+
+                        .accordion-toggle {
+                            display:none;
+                        }
+
+                        &:not(.menu-item-search) {
+                            &.disable {
+                                opacity: 0.5;
+                                pointer-events: none;
+                            }
+                        }
+
+                        // hover states to display sub-menu
+                        &:hover, 
+                        > a:focus ~, 
+                        > a:focus-visible ~ {
+
+                            .sub-menu {
+                                display:block;
+                                z-index: 0;
+                                -webkit-animation: .3s ease 0s normal forwards 1 fadein;
+                                animation: .3s ease 0s normal forwards 1 fadein;
+
+                                li {
+                                    a {
+                                        background:none;
+                                        color:$blk;
+
+                                        &:hover {
+                                            color:$blk;
+                                        }
+                                    }
+
+                                    // nested 3rd level flyout
+                                    .sub-menu {
+                                        display:none;
+                                        position: absolute;
+                                        top: 0;
+                                        margin-left: 100%;
+
+                                        &:hover {
+                                            display:block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // active menu states for current page / current parent
+
+                        &.nav-contact {
+                            margin:0 12px 0 30px;
+
+                            @include respond(desktop) {
+                                margin:0 10px 0 20px;
+                            }
+                            
+                            a {
+                                padding: 12px 40px;
+                                transition: 0.2s linear;
+                                border-radius: 10px;
+
+                                @include respond(desktop) {
+                                    padding:12px 35px;
+                                }
+    
+                                &::before {
+                                    display:none;
+                                }
+                            }
+                        }
+
+                        a {
+                            padding:40px 15px;
+                            font-size: 15px;
+                            font-weight:400;
+                            display: flex;
+                            align-items: center;
+                            z-index: 1;
+
+                            @include respond(desktop) {
+                                padding:40px 11px;
+                            }
+                        }
+
+                        .sub-menu {
+                            width: auto;
+                            white-space: nowrap;
+                            transition: $trans;
+                            position: absolute;
+                            overflow: visible;
+                            z-index: 500;
+                            margin: 0;
+                            padding: 0;
+                            display: none;
+                            width: auto;
+                            top:25px;
+
+                            .child-close {
+                                display:none;
+                            }
+
+                            .tertiary-close {
+                                display:none;
+                            }
+
+                            li {
+                                margin-left: 0;
+                                
+                                &:hover {
+                                    transition: $trans;
+
+                                    @include respond(tab-port) {
+                                        background:none;
+                                    }
+                                    
+                                    .sub-menu {
+                                        display:block;
+                                        margin-top: -95px;
+                                    }
+                                }
+
+                                a {
+                                    padding:10px 15px;
+
+                                    &::before {
+                                        display:none;
+                                    }
+                                }
+                            }
+                        }
+
+                        @include nav-search-desktop;
+                    }
+                }
+
+                #mobile-sub-close {
+                    display:none;
+                }
+
+                #header-top_mobile {
+                    display:none;
+                }
+            }
+        }
+    }
+}

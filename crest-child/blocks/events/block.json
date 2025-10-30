@@ -1,0 +1,15 @@
+{
+    "name": "acf/events",
+    "title": "Crest Events Block",
+    "description": "Events block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["events"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "events.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

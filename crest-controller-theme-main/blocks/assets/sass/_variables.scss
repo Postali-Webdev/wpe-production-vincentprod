@@ -1,0 +1,49 @@
+// Breakpoints
+$desktop-full: 1920px;
+$desktop-lg: 1400px;
+$desktop: 1200px;
+$tab-land: 1024px;
+$tab-port: 820px;
+$phone: 600px;
+
+// Containers
+$container-max-width: $desktop-lg;
+$container-padding: 30px;
+
+// Transitions
+$transition-speed: .3s;
+$transition-fast: .3s ease-in-ease-out;
+$transition-slow: .5s ease-in-ease-out;
+
+// Core Colors
+$blk: #000000;
+$dk-grey: #171717;
+$med-grey: #363636;
+$lt-grey: #4b4b4b;
+$nav-grey: #EDEDED;
+$yellow: #FFD038;
+$white: #FFFFFF;
+
+// Link Attributes
+// $link-color: $lt-red;
+// $link-hover-color: $grey;
+$link-transition-speed: .15s;
+$trans: 0.2s linear;
+
+// Typography
+$sans: 'Helvetica', sans-serif;
+$serif: 'Times New Roman', serif;
+$icomoon: 'Icomoon';
+
+$open: 'Open Sans', sans-serif;
+$oswald: 'Oswald', sans-serif;
+$arial: 'Arial Black', 'Arial Bold', 'Gadget', sans-serif;
+
+// $body-font-family: $overpass;
+// $body-text-color: $dk-blue;
+$body-line-height: 130%;
+
+// Font Weight
+$normal: 400;
+$bold: 700;
+$black: 900;

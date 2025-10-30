@@ -1,0 +1,35 @@
+.form-block {
+    .gform_wrapper {
+        padding: 0;
+        margin:0;
+        
+        .gfield_required {
+            color: $blk !important;
+        }
+
+        p.gform_required_legend {
+            color: $blk;
+            font-size: 12px;
+        }
+
+        .gform_fields {
+            grid-row-gap: 25px !important;
+        }
+
+        input, 
+        textarea {
+            border: none !important;
+            box-shadow: none !important;
+            background: #f2f2f2 !important;
+            padding: 25px !important;
+        }
+
+        input[type=submit] {
+            display: block;
+            width: 100% !important;
+            padding: 20px !important;
+            background: #267DC1 !important;
+            text-transform: uppercase !important;
+        }
+    }
+}

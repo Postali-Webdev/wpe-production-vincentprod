@@ -1,0 +1,56 @@
+header {
+    position: fixed;
+    top:30px;
+    width: 100%;
+    z-index: 50;
+    display:flex;
+    height:115px;
+    transition: $trans;
+
+    @include respond(tab-land) {
+        top:0;
+    }
+    
+    #header-top {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        width: calc(100% - 80px);
+        align-items: center;
+        padding: 0 50px 0 20px;
+        margin-left: 80px;
+        background:$xltgrey;
+        box-sizing: border-box;
+        box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.2);
+
+        @include respond(phone) {
+            height: 77px;
+        }
+        
+        &_left {
+            display: flex;
+            width: 25%;
+            justify-content: flex-start;
+
+            .custom-logo-link {
+                width: 100%;
+                height: auto;
+                display:flex;
+
+                .custom-logo {
+                    max-height: 60px;
+                    max-width: 340px;
+                    width: auto;
+
+                    @include respond(phone) {
+                        max-width: 200px;
+                    }
+                }
+            }
+            
+            @include respond(tab-land) {
+                width: 100%;
+            }
+        }
+    }
+}

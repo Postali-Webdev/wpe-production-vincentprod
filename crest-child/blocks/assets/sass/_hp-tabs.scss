@@ -1,0 +1,41 @@
+.add-title {
+    display: flex;
+    justify-content: flex-start;
+
+    .panel-title {
+        width: 130px;
+        min-width: 130px;
+        font-family: $crimson;
+        color:$red;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-top: 35px;
+        padding-left: 30px;
+        @include respond(tab-port) {
+            padding-left: 0;
+        }
+    }
+
+    .columns-layout {
+        .container {
+            padding:0;
+        }
+    }
+}
+
+.columns-layout {
+    width: 100%;
+
+    .container {
+        .columns {
+            align-items: flex-start;
+
+            @include respond(desktop-lg) {
+                align-items: flex-start;
+            }
+
+            @include tabs-nav;
+            @include tabs-content;
+        }
+    }
+}

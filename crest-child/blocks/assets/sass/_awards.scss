@@ -1,0 +1,63 @@
+.awards-block {
+    display: flex;
+
+    #awards {
+        background: white;
+        padding: 40px;
+        margin: 0 60px;
+        border-radius: 20px;
+        z-index: 0;
+        display:grid;
+        width: 100%;
+        
+        .slick-track {
+            display: flex;
+            align-items: center;
+
+            .slick-slide {
+                display:block;
+                padding: 0 10px;
+
+                img {
+                    max-width: 100%;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
+                    height: fit-content;
+                    margin: 0 auto;
+
+                    @include respond(phone) {
+                        margin:20px auto;
+                    }
+                }
+            }
+        }
+
+        .slick-prev {
+            left:-40px;
+
+            &::before {
+                content: "\e904";
+                font-family: $icomoon;
+                display: block;
+                color:$blk;
+                font-size: 25px;
+            }
+        }
+    
+        .slick-next {
+            right:-40px;
+            
+            &::before {
+                content: "\e906";
+                font-family: $icomoon;
+                display: block;
+                color:$blk;
+                font-size: 25px;
+            }
+        }
+    }
+
+}

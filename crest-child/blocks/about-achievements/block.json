@@ -1,0 +1,15 @@
+{
+    "name": "acf/about-achievements",
+    "title": "Crest About - Achievements block",
+    "description": "Achievements slider block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["achievements"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "about-achievements.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,69 @@
+#accordions-block {
+    background: $blk;
+    h2 {
+        color: $white;
+    }
+    .accordions {
+            &:last-of-type {
+                border-bottom: 2px solid $med-grey;
+            }
+
+            &_title {
+                background: none;
+                border-top: 2px solid $med-grey;
+                border-radius: 0;
+                padding: 22px 0;
+                margin-top: 0;
+
+                h3 {
+                    color: $yellow;
+                    font-family: $oswald;
+                    font-size: 32px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    position: relative;
+
+                    @include respond(phone) {
+                        font-size: 26px;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    right: 0;
+
+                    &::after {
+                        color: $yellow;
+                        font-size: 42px;
+                    }
+                }
+            }
+
+            &_content {
+                background-color: $white;
+                padding: 40px 40px 10px;
+
+                p,
+                ul li,
+                h2,
+                h3 {
+                    color: $blk;
+
+                    a {
+                        color: $blk;
+                        text-decoration: underline;
+                    }
+                }
+
+                ul {
+                    font-size: 18px;
+                    line-height: 170%;
+                    margin-bottom: 30px;
+                    margin-top: 0;
+                    font-family: $open;
+                    text-transform: none;
+                    font-weight: normal;
+                }
+            }
+        }
+}

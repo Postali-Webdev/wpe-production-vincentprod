@@ -1,0 +1,148 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+footer {
+    .disclaimer {
+        margin-left: 100px;
+        padding: 0 90px 0 30px;
+        @include respond(tab-port) {
+            margin-left: 0px;
+            padding: 0 30px;
+        }
+        @include respond(phone) {
+            padding: 30px;
+        }
+        a {
+            font-family: $crimson;
+            text-decoration: underline !important;
+            color: $blk !important;
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+        p, a, span {
+            font-size: 15px !important;
+            margin: 0 !important;
+            line-height: normal !important;
+        }
+        span {
+            font-family: $crimson;
+            ;
+        }
+        .inner-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 0;
+        }
+    }
+    .footer {
+        background: $footerdkgrey;
+        margin-left: 100px;
+        border-bottom: 60px solid $white;
+        margin-top: 100px;
+
+        @include respond(tab-port) {
+            margin-left: 0px;   
+        }
+
+        @include respond(phone) {
+            border-bottom: 0;
+        }
+        
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .footer-top {
+            background: $footerltgrey;
+            padding: 25px 90px 20px 30px;
+
+            .columns {
+                .column-full {
+                    align-items: center;
+                }
+            }            
+        }
+
+        .footer-bottom {
+            padding: 30px 90px 40px 30px;
+
+            @include respond(tab-port) {
+                padding: 30px 50px 40px 30px;
+            }
+
+            @include respond(phone) {
+                padding: 30px 30px 40px 30px;
+            }
+
+
+            .column-25 {
+                @include respond(tab-port) {
+                    width: 45%;
+                    margin-bottom: 30px;
+                }
+
+                @include respond(phone) {
+                    width: 100%;
+                }
+            }
+
+            p {
+                margin-bottom: 10px;
+                color:$dkblue;
+                font-size: 16px;
+
+                strong {
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+            }
+
+            .footer-social {
+                a {
+                    span {
+                        color:$dkblue;
+                        font-size: 26px;
+                    }
+
+                    &:hover {
+                        text-decoration: none !important;
+
+                        span {    
+                            color:$red;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                margin: 0;
+                list-style-type: none;
+
+                li {
+                    margin:0;
+
+                    a {
+                        color: $blk;
+                        font-family: $crimson;
+                        line-height: 1.6;
+                    }
+                }
+            }
+
+            iframe {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    }
+}

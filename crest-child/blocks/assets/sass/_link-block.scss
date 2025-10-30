@@ -1,0 +1,33 @@
+.link-block {
+    
+    ul.links{
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            margin: 0;
+            margin-bottom: 15px;
+            position: relative;
+
+            &::after {
+                content: "\e90d";
+                font-family: $icomoon;
+                position: absolute;
+                right: 25px;
+                font-size: 22px;
+                top: 20px;
+                color:$white;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 20px;
+                font-family: $sans;
+                display: block;
+                padding: 20px 65px 20px 40px;
+                border-radius: 15px;
+            }
+        }
+    }
+}

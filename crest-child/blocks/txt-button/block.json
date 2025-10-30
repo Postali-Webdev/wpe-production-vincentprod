@@ -1,0 +1,15 @@
+{
+    "name": "acf/txt-button",
+    "title": "Crest Button Block - text button",
+    "description": "Button block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["button"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "txt-button.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
