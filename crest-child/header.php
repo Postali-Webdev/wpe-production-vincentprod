@@ -67,6 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div id="header-top_right">
 				<div id="header-top_right_menu">
                     <div class="nav-container">
+                        <nav role="navigation">
                         <?php
                             $args = array(
                                 'container' => false,
@@ -94,6 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             );
                             wp_nav_menu( $args );
                         ?>
+                        </nav>
                         <ul class="menu">
                             <li>
                                 <?php if (!empty($location)) {  ?>

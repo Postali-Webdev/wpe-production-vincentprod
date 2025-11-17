@@ -17,7 +17,8 @@ header {
 
         &_right {
             &_menu {
-                .nav-container {
+                .nav-container,
+                nav {
                     display:flex;
                     justify-content: flex-end;
                     align-items: center;
