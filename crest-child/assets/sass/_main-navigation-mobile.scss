@@ -46,7 +46,7 @@
             
             &_right {
                 &_menu {
-                    .nav-container {
+                    .nav-container{
                         display:block;
                         flex-wrap: wrap;
                         padding: 0;
@@ -81,8 +81,16 @@
                             animation: .5s ease 0s normal forwards 1 slideback;
                         }
 
+                        nav {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            flex-wrap: wrap;
+                        }
+
                         ul.menu {
                             display: block;
+                            width: 100%;
 
                             &:nth-of-type(3) {
                                 li {
@@ -184,7 +192,7 @@
 
                                     span {
                                         color: $blk;
-                                        font-size: 25px;
+                                        font-size: 18px;
                                         transition:$trans;
                                     }
 

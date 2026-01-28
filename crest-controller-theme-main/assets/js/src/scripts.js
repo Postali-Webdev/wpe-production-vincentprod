@@ -33,21 +33,21 @@ jQuery( function ( $ ) {
     });	
 
     //Mobile menu accordion toggle for sub pages
-    $('.nav-container > ul.menu > li.menu-item-has-children').prepend('<div class="accordion-toggle"><span class="icon-arrow"></span></div>');
-    $('.nav-container > ul.menu > li.menu-item-has-children > .sub-menu').prepend('<div class="child-close"><span class="icon-chevron-left"></span> back</div>');
+    $('.nav-container > nav > ul.menu > li.menu-item-has-children').prepend('<div class="accordion-toggle"><span class="icon-arrow"></span></div>');
+    $('.nav-container > nav > ul.menu > li.menu-item-has-children > .sub-menu').prepend('<div class="child-close"><span class="icon-chevron-left"></span> back</div>');
 
     //Mobile menu accordion toggle for third-level pages
-    $('.nav-container > ul.menu > li.menu-item-has-children > .sub-menu > li.menu-item-has-children').prepend('<div class="accordion-toggle2"><span class="icon-arrow"></span></div>');
-    $('.nav-container > ul.menu > li.menu-item-has-children > .sub-menu > li.menu-item-has-children > .sub-menu').prepend('<div class="tertiary-close"><span class="icon-chevron-left"></span> back</div>');
+    $('.nav-container > nav > ul.menu > li.menu-item-has-children > .sub-menu > li.menu-item-has-children').prepend('<div class="accordion-toggle2"><span class="icon-arrow"></span></div>');
+    $('.nav-container > nav > ul.menu > li.menu-item-has-children > .sub-menu > li.menu-item-has-children > .sub-menu').prepend('<div class="tertiary-close"><span class="icon-chevron-left"></span> back</div>');
 
-    $('.nav-container .accordion-toggle').click(function(event) {
+    $('.nav-container > nav > .menu > li > .accordion-toggle').click(function(event) {
         event.preventDefault();
         $(this).siblings('.sub-menu').addClass('opened');
         $(this).siblings('.sub-menu').removeClass('closed');
         console.log('clicked');
     });
 
-    $('.nav-container .accordion-toggle2').click(function(event) {
+    $('.nav-container > nav > .menu > li > .sub-menu > li > .accordion-toggle2').click(function(event) {
         event.preventDefault();
         $(this).siblings('.sub-menu').addClass('opened');
         $(this).siblings('.sub-menu').removeClass('closed');
@@ -65,7 +65,7 @@ jQuery( function ( $ ) {
     });
 
     // desktop child click close parent subnav
-    $('.nav-container > .menu > li.menu-item-has-children > .sub-menu > li > a').click(function(event) {
+    $('.nav-container > nav > .menu > li.menu-item-has-children > .sub-menu > li > a').click(function(event) {
         $(this).closest('.sub-menu').css('display', 'none');
     });
 
